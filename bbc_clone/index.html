@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>BBC</title>
+  <style media="screen">
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+      text-decoration: none;
+    }
+
+    /* HTML5 display-role reset for older browsers */
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+
+    body {
+      line-height: 1;
+    }
+
+    ol,
+    ul {
+      list-style: none;
+    }
+
+    blockquote,
+    q {
+      quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+      content: '';
+      content: none;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .maindiv {
+      width: 1200px;
+      margin: 0px auto;
+    }
+
+    #logo {
+      width: 130px;
+      height: 60px;
+      float: left;
+      border-right: 2px #CCCCCC solid;
+      padding-right: 10px;
+    }
+
+    #logoimg {
+      max-height: 100%;
+    }
+
+    #sign {
+      width: 140px;
+      height: 60px;
+      float: left;
+      font-size: 30px;
+      line-height: 60px;
+      padding-left: 10px;
+      border-right: 2px #CCCCCC solid;
+    }
+
+    #sign a {
+      color: black;
+      font-weight: bold;
+    }
+
+    #main_menu {
+      height: 60px;
+      line-height: 60px;
+      word-spacing: 15px;
+      font-weight: bold;
+      float: left;
+      font-size: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+
+    }
+
+    .border {
+      padding-right: 20px;
+      border-right: 2px #CCCCCC solid;
+      color: black;
+    }
+
+    .border:hover {
+      border-bottom: 6px #BB1919 solid;
+    }
+
+    .border:active {
+      background-color: #BB1919;
+      color: white;
+    }
+
+    #heading {
+      height: 110px;
+      background-color: #BB1919;
+      line-height: 110px;
+      font-size: 60px;
+      color: white;
+    }
+
+    #sub_menu_div {
+      background-color: #BB1919;
+      height: 20px;
+      padding-bottom: 10px;
+    }
+
+    #sub_menu {
+      line-height: 20px;
+      font-size: 25px;
+      word-spacing: 15px;
+      font-weight: 400;
+      color: white;
+    }
+
+    #sub_menu a {
+      color: white;
+      border-right: 2px #C33636 solid;
+      padding-right: 10px;
+    }
+
+    #sub_menu a:hover {
+      border-bottom: 6px white solid;
+    }
+
+    #news1 {
+      width: 59%;
+      float: left;
+    }
+
+    #news1 .text {
+      float: left;
+      width: 38%;
+      color: black;
+      font-size: 27px;
+      font-weight: bolder;
+      line-height: 30px;
+      margin-top: 10px;
+    }
+
+    #news1 .text h2 {
+      margin-right: 30px;
+    }
+
+    #news1 .text p {
+      margin-top: 5px;
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 20px;
+    }
+
+    #news1 .img {
+      float: right;
+      width: 60%;
+      margin-top: 10px;
+    }
+
+    #news1 .img img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .mininews {
+      width: 19%;
+      float: left;
+      margin-left: 10px;
+      color: black;
+    }
+
+    .mininews img {
+      max-height: 40%;
+      max-width: 100%;
+      margin-top: 10px;
+    }
+
+    .mininews h2 {
+      margin-top: 5px;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 20px;
+    }
+
+    .mininews p {
+      margin-top: 8px;
+      line-height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="maindiv">
+    <div class="" id="logo">
+      <img src="img/bbc_logo.png" id="logoimg">
+    </div>
+    <div class="" id="sign">
+      <a href="">Sign In</a>
+    </div>
+    <nav id="main_menu">
+      <a href="" class="border">Home</a>
+      <a href="bbc_news.html" class="border">News</a>
+      <a href="" class="border">Sports</a>
+      <a href="" class="border">Reel</a>
+      <a href="" class="border">Worklife</a>
+      <a href="" class="border">Travel</a>
+      <a href="" class="border">Future</a>
+      <a href="" class="border">Culture</a>
+    </nav>
+  </div>
+  <div style="clear:both;"></div>
+  <div id="heading">
+    <div class="maindiv">
+      <h1>News</h1>
+    </div>
+  </div>
+  <div id="sub_menu_div">
+    <div class="maindiv">
+      <nav id="sub_menu">
+        <a href="">Home</a>
+        <a href="">Coronavirus</a>
+        <a href="">Tech</a>
+        <a href="">World</a>
+        <a href="">Science</a>
+        <a href="">Tech</a>
+        <a href="">Business</a>
+        <a href="">Health</a>
+        <a href="">Esports</a>
+      </nav>
+    </div>
+  </div>
+  <div class="maindiv">
+    <a href="">
+      <div class="" id="news1">
+        <div class="text">
+          <h2>Tunisia's PM sacked after violent Covid protests:</h2>
+          <p>The President says he is taking over, after a virus outbreak reignites political and economic unrest.</p>
+        </div>
+        <div class="img">
+          <img src="img/tunish_protest.png" alt="">
+        </div>
+      </div>
+    </a>
+    <a href="">
+      <div class="mininews" id="news2">
+        <img src="img/iran_water_protests.png" alt="" width="100%">
+        <h2>Deadly street protests over Iran water shortages:</h2>
+        <p>Khuzestan is one of the country's hottest regions, where temperatures can reach 50C.</p>
+      </div>
+    </a>
+    <a href="">
+      <div class="mininews" id="news3">
+        <img src="img/afghanisthan_casualties.png" alt="" width="100%">
+        <h2>Civilian casualties in Afghanistan at record level:</h2>
+        <p>More than 1600 civilians have been killed so far, and the UN expects a future rise.</p>
+      </div>
+    </a>
+  </div>
+</body>
+
+</html>

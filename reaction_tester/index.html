@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>React!</title>
+    <style media="screen">
+      #top{
+        margin-bottom: 30px;
+        width:1520px;
+        height:100px;
+      }
+      #Start{
+        font-size: 30px;
+        font-weight: bold;
+        width: 50%;
+        background-color: green;
+        float: left;
+      }
+      #Stop{
+        font-size: 30px;
+        font-weight: bold;
+        width: 50%;
+        background-color: red;
+        float: left;
+      }
+      #targetSpace{
+        width:1520px;
+        height:590px;
+      }
+      #target{
+        display: none;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="" id="top">
+      <h1>Let's get those reflexes goin. Press Start to begin.</h1>
+      <button type="button" name="button" id="Start"><div class="">Start</div> </button>
+      <button type="button" name="button" id="Stop"><div class="">Stop</div> </button>
+    </div>
+    <div class="" id="targetSpace">
+      <button type="button" name="button" id="target"></button>
+    </div>
+    <script type="text/javascript">
+      let edge,val,colour,topMargin,left,strt,end;
+      let timeRecord=[];
+      function targetStats(){
+        val=Math.floor(Math.random()*171 + 30);
+        edge = val.toString()+"px";
+        colour = '#'+Math.floor(Math.random()*16777216).toString(16);
+        topMargin = Math.floor(Math.random()*(590-val+1)).toString()+"px";
+        left = Math.floor(Math.random()*(1520-val+1)).toString()+"px";
+      }
+      function generateTarget(){
+        let x =document.getElementById("target");
+        x.style.height =edge;
+        x.style.width =edge;
+        x.style.backgroundColor =colour;
+        x.style.top =topMargin;
+        x.style.left =left;
+        var c =Math.floor(Math.random()*2);
+        if(c==0){
+          x.style.borderRadius="50%";
+        }
+        else{
+          x.style.borderRadius="0%";
+        }
+      }
+      document.getElementById("Start").onclick=function(){
+        setTimeout(function(){targetStats();generateTarget();document.getElementById("target").style.display="inline-block";strt=performance.now();},3000);
+      }
+      document.getElementById("target").onclick=function(){
+        end=performance.now();
+        timeRecord.push(Math.floor(end-strt));
+        targetStats();
+        generateTarget();
+        strt = performance.now();
+      }
+      document.getElementById("Stop").onclick=function() {
+        document.getElementById("target").style.display="none";
+        let max=Math.max(...timeRecord);
+        let min=Math.min(...timeRecord);
+        var avg=0;
+        for(var i=0;i<timeRecord.length;i++){
+          avg = avg + timeRecord[i];
+        }
+        avg = avg/timeRecord.length;
+        alert("Slowest Time:"+ max +"  Fastest Time:"+min+"  Average Time:"+avg);
+        timeRecord.splice(0,timeRecord.length);
+      }
+    </script>
+  </body>
+</html>
