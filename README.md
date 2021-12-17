@@ -1,2 +1,2 @@
 # Album
- Go throught what I have made as i learnt web dev.
+ Go through what I have made as I learnt web dev.
